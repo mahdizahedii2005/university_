@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/CLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/general.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Course/general.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708547097692</updated>
       <workItem from="1708547098730" duration="2000" />
-      <workItem from="1708547402232" duration="1144000" />
+      <workItem from="1708547402232" duration="1514000" />
     </task>
     <servers />
   </component>
