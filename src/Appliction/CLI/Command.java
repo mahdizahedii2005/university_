@@ -1,4 +1,4 @@
-
+package Appliction.CLI;
 
 public class Command {
     private String command;
