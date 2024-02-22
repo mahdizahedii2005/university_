@@ -1,5 +1,6 @@
 package Appliction;
-public class CLI {
+
+public class Appliction {
     public void run(){
 
     }
