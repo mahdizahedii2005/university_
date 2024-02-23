@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/univercity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Shell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Shell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/Specialized.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Course/general.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +61,8 @@
       <workItem from="1708547402232" duration="1743000" />
       <workItem from="1708592409875" duration="76000" />
       <workItem from="1708613115611" duration="237000" />
-      <workItem from="1708614130822" duration="3565000" />
+      <workItem from="1708614130822" duration="3700000" />
+      <workItem from="1708681066177" duration="1343000" />
     </task>
     <servers />
   </component>
