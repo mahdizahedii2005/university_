@@ -10,8 +10,8 @@ public class Admin extends Panel {
         super(userName, password, access);
     }
 
-    public void creat_courses(int numberOfStudent, int capacity, int code, String teacher, String name, String startTime, String examTime, String examDate, String type, boolean available, College college) {
-        courses newCourses = new courses(numberOfStudent, capacity, code, teacher, name, startTime, examTime, examDate, type, available, college);
+    public void creat_courses(int capacity, int code, int Unit, String teacher, String name, String startTime, String examTime, String examDate, String type, boolean available, College college) {
+        courses newCourses = new courses(capacity, code, Unit, teacher, name, startTime, examTime, examDate, type, available, college);
         college.addListOfCourses(newCourses);
     }
 
