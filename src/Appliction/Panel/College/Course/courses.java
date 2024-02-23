@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class courses {
     public ArrayList<Student> ListOfStudent = new ArrayList<>();
-    public int numberOfStudent;
-    private final int capacity, code;
+    public int numberOfStudent,capacity;
+    private final int code;
     private final College College;
     private final String teacher, name, StartTime, examTime, examDate, Type;
     private boolean Available;
@@ -24,6 +24,12 @@ public class courses {
         Type = type;
         Available = available;
         this.College = college;
+    }
+    public void increaseCapacity(int NumIncrease){
+        this.capacity = capacity + NumIncrease ;
+    }
+    public void deleteStudent(Student student){
+        ListOfStudent.remove(student);
     }
 
     public College getCollege() {

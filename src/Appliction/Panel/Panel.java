@@ -1,23 +1,29 @@
 package Appliction.Panel;
 
 import Appliction.Panel.College.College;
+import Appliction.Panel.College.Course.courses;
 
 import java.util.ArrayList;
 
 public abstract class Panel {
-    private univercity univercity ;
-    private String userName ;
-    private String password ;
-    private boolean access ;
+    private university univercity;
+    private String userName;
+    private String password;
+    private boolean access;
+
     public Panel(String userName, String password, boolean access) {
-        univercity = new univercity("Sharif");
+        univercity = new university("Sharif");
         this.userName = userName;
         this.password = password;
         this.access = access;
     }
 
-    public ArrayList<College> list_of_College(){
+    public ArrayList<College> list_of_College() {
         return univercity.getColleges();
+    }
+
+    public ArrayList<courses> list_of_courses(College college) {
+        return college.getListOfCourses();
     }
 
     public String getUserName() {

@@ -4,13 +4,14 @@ import Appliction.Panel.College.College;
 
 import java.util.ArrayList;
 
-public class univercity {
+public class university {
     private ArrayList<College> colleges;
     private String name;
-    public univercity(String name) {
+    public university(String name) {
         colleges = new ArrayList<>();
         this.name = name;
     }
+
 
     public ArrayList<College> getColleges() {
         return colleges;
