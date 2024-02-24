@@ -1,6 +1,6 @@
-import Appliction.Appliction;
+import Appliction.Application;
 public class Main {
     public static void main(String[] args) {
-        new Appliction().run();
+        new Application().run();
     }
 }
