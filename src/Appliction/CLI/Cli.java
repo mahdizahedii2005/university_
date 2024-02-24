@@ -16,22 +16,29 @@ public class Cli {
         ListOfStates.add("sign in or sign up");
         ListOfStates.add("sign in");
         ListOfStates.add("sign up");
+        ListOfStates.add("adminPanel");
+        ListOfStates.add("studentPanel");
         state = "sign in or sign up";
     }
 
     public String processCommand(Command command) {
-        String massage = "";
+        String massage = commandHandler.help(command);
+
         if (commandHandler.SignUp(command) || commandHandler.SignIn(command) || commandHandler.si_or_SU(command)) {
             return massage;
         }
-        return Application.Error;
+        if (massage.equals("")) {
+            return Application.ERROR;
+        } else {
+            return massage;
+        }
     }
 
 
     public String getHeader() {
         String header = "";
         if (state.equals("sign in or sign up")) {
-            header = "Signin or signup(stuck together)//";
+            header = "Signin or signup(stuck together(in and up)//";
         } else if (state.equals("sign in")) {
             header = "sign in(enter your username and password(with 1 space between them)//";
         } else if (state.equals("sign up")) {

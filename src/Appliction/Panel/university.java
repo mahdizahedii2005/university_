@@ -5,7 +5,7 @@ import Appliction.Panel.College.College;
 import java.util.ArrayList;
 
 public class university {
-    private ArrayList<College> collegesList;
+    public static ArrayList<College> collegesList;
     private String name;
     public university(String name) {
         collegesList = new ArrayList<>();
@@ -18,7 +18,7 @@ public class university {
         this.collegesList = collegesList;
     }
     public void addCollege(College college){
-        this.collegesList.add(college);
+        collegesList.add(college);
     }
     public void CreatCollege(String Name){
         College college1 = new College(Name);

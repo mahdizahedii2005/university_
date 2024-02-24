@@ -4,7 +4,7 @@ import Appliction.Panel.College.Course.courses;
 import java.util.ArrayList;
 
 public class College {
-    private final String Name;
+    final String Name;
     private ArrayList<courses> ListOfCourses = new ArrayList<>();
     public College(String name) {
         Name = name;
@@ -19,5 +19,9 @@ public class College {
     }
     public void addListOfCourses(courses courses){
         this.ListOfCourses.add(courses);
+    }
+    @Override
+    public String toString() {
+        return Name;
     }
 }

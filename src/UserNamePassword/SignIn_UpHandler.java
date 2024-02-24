@@ -26,6 +26,16 @@ public class SignIn_UpHandler {
         }
     }
 
+    public boolean DoWeHaveThis(String username) {
+        while (ScannerPass.hasNextLine()) {
+            String realUsername = CliMethodNeeded.ReturnFirstWord(ScannerPass.nextLine());
+            if (realUsername.equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void AddPerson(String UserName, String Password) {
         writerPass.println(UserName + " " + Password);
     }
@@ -41,4 +51,5 @@ public class SignIn_UpHandler {
         }
         return false;
     }
+
 }
