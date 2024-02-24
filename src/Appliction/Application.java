@@ -1,7 +1,7 @@
 package Appliction;
 
-public class Appliction {
+public class Application{
     public void run(){
-
+        
     }
 }
