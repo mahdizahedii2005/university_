@@ -1,20 +1,29 @@
 package Appliction.CLI;
 
 import Appliction.Application;
+
 import java.util.ArrayList;
 
 public class Cli {
     private Shell shell;
     public static String state;
     private ArrayList<String> ListOfStates = new ArrayList<>();
+    private CommandHandler commandHandler;
+
     public Cli() {
         shell = new Shell();
+        commandHandler = new CommandHandler();
         ListOfStates.add("sign in or sign up");
         ListOfStates.add("sign in");
+        ListOfStates.add("sign up");
         state = "sign in or sign up";
     }
 
     public String processCommand(Command command) {
+        String massage = "";
+        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) || commandHandler.si_or_SU(command)) {
+            return massage;
+        }
         return Application.Error;
     }
 
@@ -22,9 +31,11 @@ public class Cli {
     public String getHeader() {
         String header = "";
         if (state.equals("sign in or sign up")) {
-            header = "Sign in or sign up//";
-        }else if (state.equals("sign in")){
+            header = "Signin or signup(stuck together)//";
+        } else if (state.equals("sign in")) {
             header = "sign in(enter your username and password(with 1 space between them)//";
+        } else if (state.equals("sign up")) {
+            header = "sign up(enter your username and password(with 1 space between them)//";
         }
 //        Directory working = shell.getWorkingDirectory();
 //        String first = user + "@" + computerName + ":~";
@@ -37,7 +48,7 @@ public class Cli {
 //            first = first + "/"+nasl.get(i);
 //        }
 //        first = first + "$";
-//        return first;
+//        return first
         return header;
     }
 }

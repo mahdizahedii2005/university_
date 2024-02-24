@@ -29,7 +29,11 @@ public class CliMethodNeeded {
             }
             first.add(c);
         }
-        return first.toString();
+        String result = "";
+        for (char c : first) {
+            result = result + c;
+        }
+        return result;
     }
 
     public static String ReturnSecondWord(String a) {
@@ -44,6 +48,10 @@ public class CliMethodNeeded {
                 Second.add(c);
             }
         }
-        return Second.toString();
+        String result = "";
+        for (char c : Second) {
+            result = result + c;
+        }
+        return result;
     }
 }

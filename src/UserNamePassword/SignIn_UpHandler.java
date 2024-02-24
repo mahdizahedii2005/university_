@@ -27,7 +27,7 @@ public class SignIn_UpHandler {
     }
 
     public void AddPerson(String UserName, String Password) {
-        writerPass.println(UserName + ":" + Password);
+        writerPass.println(UserName + " " + Password);
     }
 
     public boolean IsThisPersonValid(String userName, String Password) {

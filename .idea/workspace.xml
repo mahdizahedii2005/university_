@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Methods/CliMethodNeeded.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/university.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/university.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Methods/CliMethodNeeded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Methods/CliMethodNeeded.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1708752712709" duration="2044000" />
       <workItem from="1708766484132" duration="5303000" />
       <workItem from="1708773272183" duration="155000" />
-      <workItem from="1708776931179" duration="2773000" />
+      <workItem from="1708776931179" duration="5791000" />
     </task>
     <servers />
   </component>
