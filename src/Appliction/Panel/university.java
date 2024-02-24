@@ -5,29 +5,28 @@ import Appliction.Panel.College.College;
 import java.util.ArrayList;
 
 public class university {
-    private ArrayList<College> colleges;
+    private ArrayList<College> collegesList;
     private String name;
     public university(String name) {
-        colleges = new ArrayList<>();
+        collegesList = new ArrayList<>();
         this.name = name;
     }
-
-
-    public ArrayList<College> getColleges() {
-        return colleges;
+    public ArrayList<College> getCollegesList() {
+        return collegesList;
     }
-
-    public void setColleges(ArrayList<College> colleges) {
-        this.colleges = colleges;
+    public void setCollegesList(ArrayList<College> collegesList) {
+        this.collegesList = collegesList;
     }
     public void addCollege(College college){
-        this.colleges.add(college);
+        this.collegesList.add(college);
     }
-
+    public void CreatCollege(String Name){
+        College college1 = new College(Name);
+        collegesList.add(college1);
+    }
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

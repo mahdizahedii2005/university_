@@ -19,7 +19,7 @@ public abstract class Panel {
     }
 
     public ArrayList<College> list_of_College() {
-        return univercity.getColleges();
+        return univercity.getCollegesList();
     }
 
     public ArrayList<courses> list_of_courses(College college) {
