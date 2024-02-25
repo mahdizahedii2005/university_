@@ -29,11 +29,17 @@ public class courses {
         this.College = college;
     }
 
+    @Override
+    public String toString() {
+        return name + " :: " + code + " , " + Unit + " , " + teacher + " , " + StartTime + " , " + examDate + " , " + examTime + " , " + Type + " , " + capacity + " , " + numberOfStudent;
+
+    }
+
     public void increaseNumStudent() {
         this.numberOfStudent++;
     }
 
-    public void DecreaseNumStudent(){
+    public void DecreaseNumStudent() {
         this.numberOfStudent--;
     }
 

@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Appliction/hardcode/HardCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/university.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/university.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,20 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Desktop/programing/java/Ap/first_practice/first_peractice/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Desktop/programing/java/Self_learn/ALi.pera/src/Main.java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "D:/Desktop/programing/java/Ap/first_practice/first_peractice/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,10 +78,28 @@
       <workItem from="1708773272183" duration="155000" />
       <workItem from="1708776931179" duration="10934000" />
       <workItem from="1708800863730" duration="148000" />
+      <workItem from="1708868005795" duration="3965000" />
+      <workItem from="1708893614796" duration="3105000" />
+      <workItem from="1708901662031" duration="3199000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java</url>
+          <line>43</line>
+          <properties class="UserNamePassword.SignIn_UpHandler" method="IsThisPersonValid">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package UserNamePassword;
 
 import Appliction.Methods.CliMethodNeeded;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -48,6 +49,10 @@ public class SignIn_UpHandler {
             if (RealPassword.equals(Password) && RealUserName.equals(userName)) {
                 return true;
             }
+        }
+        try {
+            this.ScannerPass = new Scanner(passFile);
+        } catch (IOException d) {
         }
         return false;
     }

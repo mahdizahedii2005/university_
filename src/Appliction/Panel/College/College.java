@@ -20,7 +20,13 @@ public class College {
     public void addListOfCourses(courses courses){
         this.ListOfCourses.add(courses);
     }
+
+    public String getName() {
+        return Name;
+    }
+
     @Override
+
     public String toString() {
         return Name;
     }
