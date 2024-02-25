@@ -17,9 +17,9 @@ public class CommandHandler {
             } else if (Cli.state.equals("sign up")) {
                 HelpResult = "enter a user name and password that you want for your account";
             } else if (Cli.state.equals("adminPanel")) {
-                HelpResult = "lc -> for see the list of the College\n";//todo
+                HelpResult = "ld -> for see the list of the Department\n";//todo
             } else if (Cli.state.equals("studentPanel")) {
-                HelpResult = "";//todo
+                HelpResult = "ld -> for see the list of the Department\n";//todo
             }
         }
         return HelpResult;
@@ -75,7 +75,7 @@ public class CommandHandler {
     }
 
     public boolean seeListOfCollege(Command command) {
-        if (command.getArg() == null && command.getCommand().equals("lc")) {
+        if (command.getArg() == null && command.getCommand().equals("ld")) {
             for (College c : university.collegesList) {
                 System.out.println(c);
             }
