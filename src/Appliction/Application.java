@@ -12,7 +12,7 @@ public class Application implements Runnable {
     CliMethodNeeded cliMethodNeeded;
     private final Cli cli;
     private final Scanner sc;
-    public static final String ERROR = "Syntax Invalid(watch out for extra Space)";
+    public static final String ERROR = "Syntax Invalid(watch out for extra Space or use code help)";
 
     public Application() {
         cli = new Cli();

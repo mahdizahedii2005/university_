@@ -7,12 +7,15 @@ import java.util.ArrayList;
 public class Student extends Panel {
     private int Units_piked = 0;
     private int general_unit = 0;
-    private final String Name;
     private ArrayList<courses> coursesArrayList = new ArrayList<>();
 
-    public Student(String userName, String password, boolean access, String Name) {
+    public Student(String userName, String password, boolean access) {
         super(userName, password, access);
-        this.Name = Name;
+    }
+
+    @Override
+    public String toString() {
+        return getUserName() +" -> unit piked:"+ Units_piked;
     }
 
     public String PikeCourses(courses courses) {
@@ -105,10 +108,6 @@ public class Student extends Panel {
 
     public void setUnits_piked(int units_piked) {
         Units_piked = units_piked;
-    }
-
-    public String getName() {
-        return Name;
     }
 
     public ArrayList<Appliction.Panel.College.Course.courses> getCoursesArrayList() {

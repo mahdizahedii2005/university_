@@ -3,6 +3,7 @@ package Appliction.CLI;
 import Appliction.Application;
 import Appliction.Panel.College.College;
 import Appliction.Panel.College.Course.courses;
+import Appliction.Panel.Student;
 import UserNamePassword.SignIn_UpHandler;
 import Appliction.Panel.university;
 
@@ -24,6 +25,8 @@ public class CommandHandler {
                 HelpResult = "back -> back to the sign in\nld -> for see the list of the Department\n";//todo
             } else if (Cli.state.equals("CollegeList")) {
                 HelpResult = "back -> back to the Panel state\nname any department -> see the department courses";
+            } else if (Cli.state.equals("coursesList")) {
+                HelpResult = "back -> back to the departmentList state\ncode of any courses -> see the List of the student of the courses";
             }
         }
         return HelpResult;
@@ -114,6 +117,7 @@ public class CommandHandler {
             for (College c : university.collegesList) {
                 if (command.getCommand().equals(c.getName()) && command.getArg() == null) {
                     IFindIt = true;
+                    Cli.curentCollege = c;
                     if (c.getListOfCourses().isEmpty()) {
                         System.out.println("no courses for this college");
                         return true;
@@ -124,8 +128,40 @@ public class CommandHandler {
                     }
                 }
             }
-            if (!IFindIt){
+            if (!IFindIt) {
                 System.out.println("no department with this name");
+            } else if (Cli.AmIAdmin) {
+                Cli.state = "coursesList";
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public boolean seethestudent(Command command) {
+        if (command.getArg() == null) {
+            int code;
+            try {
+                code = Integer.parseInt(command.getCommand());
+            } catch (NumberFormatException e) {
+                System.out.println(Application.ERROR);
+                return true;
+            }
+            boolean f = false;
+            for (courses cou : Cli.curentCollege.getListOfCourses()) {
+                if (cou.getCode() == code){
+                    f = true;
+                    if (cou.getListOfStudent().isEmpty()){
+                        System.out.println("this course is empty");
+                        return true;
+                    }
+                    for (Student student:cou.getListOfStudent()) {
+                        System.out.println(student);
+                    }
+                }
+            }
+            if (!f){
+                System.out.println("no courses find with this code");
             }
             return true;
         }

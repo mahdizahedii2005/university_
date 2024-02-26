@@ -2,6 +2,7 @@ package Appliction.CLI;
 
 import Appliction.Application;
 import Appliction.Panel.Admin;
+import Appliction.Panel.College.College;
 import Appliction.Panel.Student;
 
 import java.util.ArrayList;
@@ -12,10 +13,9 @@ public class Cli {
     public static String state;
     private ArrayList<String> ListOfStates = new ArrayList<>();
     public static Student curentStudent;
-    public static Admin admin;
     private CommandHandler commandHandler;
     public static boolean AmIAdmin;
-
+    public static College curentCollege;
     public Cli() {
         shell = new Shell();
         commandHandler = new CommandHandler();
@@ -25,12 +25,13 @@ public class Cli {
         ListOfStates.add("adminPanel");
         ListOfStates.add("studentPanel");
         ListOfStates.add("CollegeList");
+        ListOfStates.add("coursesList");
         state = "sign in or sign up";
     }
 
     public String processCommand(Command command) {
         String massage = commandHandler.help(command);
-        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) || commandHandler.si_or_SU(command) || commandHandler.seeListOfCollege(command) || commandHandler.seetheCourses(command)) {
+        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) || commandHandler.si_or_SU(command) || commandHandler.seeListOfCollege(command) || commandHandler.seetheCourses(command)|| commandHandler.seethestudent(command)) {
             return massage;
         } else {
             if (massage.equals("")) {
@@ -51,15 +52,17 @@ public class Cli {
         } else if (state.equals("sign up")) {
             header = "sign up(enter your username and password(with 1 space between them)//";
         } else if (state.equals("studentPanel")) {
-            header = curentStudent.getName() + "Panel//";
+            header = curentStudent.getUserName() + "Panel//";
         } else if (state.equals("adminPanel")) {
             header = "adminPanel//";
         } else if (state.equals("CollegeList")) {
             if (AmIAdmin) {
                 header = "adminPanel//departmentList//";
             } else {
-                header = curentStudent.getName() + "//departmentList//";
+                header = curentStudent.getUserName() + "//departmentList//";
             }
+        } else if (state.equals("coursesList")) {
+            header = "adminPanel//departmentList//" + curentCollege.getName()+"//";
         }
         return header;
     }

@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/hardcode/HardCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/College.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/university.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/university.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -80,7 +80,7 @@
       <workItem from="1708800863730" duration="148000" />
       <workItem from="1708868005795" duration="3965000" />
       <workItem from="1708893614796" duration="3105000" />
-      <workItem from="1708901662031" duration="3199000" />
+      <workItem from="1708901662031" duration="6251000" />
     </task>
     <servers />
   </component>
@@ -91,13 +91,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java</url>
-          <line>43</line>
-          <properties class="UserNamePassword.SignIn_UpHandler" method="IsThisPersonValid">
+          <url>file://$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java</url>
+          <line>140</line>
+          <properties class="Appliction.CLI.CommandHandler" method="seethestudent">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
