@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" afterDir="false" />
-    </list>
+    <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,12 +72,24 @@
       <workItem from="1708800863730" duration="148000" />
       <workItem from="1708868005795" duration="3965000" />
       <workItem from="1708893614796" duration="3105000" />
-      <workItem from="1708901662031" duration="6251000" />
+      <workItem from="1708901662031" duration="6639000" />
     </task>
+    <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
+      <option name="closed" value="true" />
+      <created>1708908464451</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۱" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۱" />
+      <updated>1708908464451</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

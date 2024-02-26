@@ -1,7 +1,7 @@
 Admin:
 //see the list of the courses
-//create the courses
-//increas the capacity of the courses
+create the courses
+increas the capacity of the courses
 //see thhe list of the student of every courses
 //delete student from courses
 
@@ -13,5 +13,5 @@ return to the login page
 
 Student:
 //see the courses
-//piked the courses
-//delete the courses
+piked the courses
+delete the courses
