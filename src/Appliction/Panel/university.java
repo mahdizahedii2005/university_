@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class university {
     public static ArrayList<College> collegesList = new ArrayList<>();
+    public static ArrayList<Student> StudentList = new ArrayList<>();
     private String name;
 
     public university(String name) {

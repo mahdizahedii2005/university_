@@ -1,12 +1,11 @@
 package Appliction.CLI;
 
 import Appliction.Application;
-import Appliction.Panel.Admin;
 import Appliction.Panel.College.College;
+import Appliction.Panel.College.Course.courses;
 import Appliction.Panel.Student;
 
 import java.util.ArrayList;
-import java.util.logging.ErrorManager;
 
 public class Cli {
     private Shell shell;
@@ -16,6 +15,8 @@ public class Cli {
     private CommandHandler commandHandler;
     public static boolean AmIAdmin;
     public static College curentCollege;
+    public static courses curentCourse;
+
     public Cli() {
         shell = new Shell();
         commandHandler = new CommandHandler();
@@ -26,18 +27,24 @@ public class Cli {
         ListOfStates.add("studentPanel");
         ListOfStates.add("CollegeList");
         ListOfStates.add("coursesList");
+        ListOfStates.add("studentCourseList");
         state = "sign in or sign up";
     }
 
     public String processCommand(Command command) {
-        String massage = commandHandler.help(command);
-        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) || commandHandler.si_or_SU(command) || commandHandler.seeListOfCollege(command) || commandHandler.seetheCourses(command)|| commandHandler.seethestudent(command)) {
-            return massage;
+        boolean dihave = commandHandler.help(command);
+        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) ||
+                commandHandler.si_or_SU(command) || commandHandler.seeListOfCollege(command) ||
+                commandHandler.seetheCourses(command) || commandHandler.addCourse(command) ||
+                commandHandler.addStudentCourse(command) || commandHandler.seetheStudent(command) ||
+                commandHandler.deleteStudent(command) || commandHandler.creatCollege(command) ||
+                commandHandler.increaseCapacityCourse(command)) {
+            return "";
         } else {
-            if (massage.equals("")) {
+            if (dihave) {
                 return Application.ERROR;
             } else {
-                return massage;
+                return "";
             }
         }
     }
@@ -62,7 +69,7 @@ public class Cli {
                 header = curentStudent.getUserName() + "//departmentList//";
             }
         } else if (state.equals("coursesList")) {
-            header = "adminPanel//departmentList//" + curentCollege.getName()+"//";
+            header = "adminPanel//departmentList//" + curentCollege.getName() + "//";
         }
         return header;
     }

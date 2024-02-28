@@ -47,6 +47,10 @@ public class SignIn_UpHandler {
             String RealUserName = CliMethodNeeded.ReturnFirstWord(line);
             String RealPassword = CliMethodNeeded.ReturnSecondWord(line);
             if (RealPassword.equals(Password) && RealUserName.equals(userName)) {
+                try {
+                    this.ScannerPass = new Scanner(passFile);
+                } catch (IOException d) {
+                }
                 return true;
             }
         }

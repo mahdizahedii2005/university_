@@ -11,11 +11,12 @@ public class Student extends Panel {
 
     public Student(String userName, String password, boolean access) {
         super(userName, password, access);
+        university.StudentList.add(this);
     }
 
     @Override
     public String toString() {
-        return getUserName() +" -> unit piked:"+ Units_piked;
+        return getUserName() + " -> unit piked:" + Units_piked;
     }
 
     public String PikeCourses(courses courses) {
