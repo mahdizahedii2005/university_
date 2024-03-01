@@ -6,6 +6,7 @@ import Appliction.Panel.College.Course.*;
 import Appliction.Panel.Student;
 import UserNamePassword.SignIn_UpHandler;
 import Appliction.Panel.university;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 public class CommandHandler {
     courseCreat coursesCreat = new courseCreat();
@@ -31,13 +32,15 @@ public class CommandHandler {
                 HelpResult = "back -> back to the departmentList state\ncode of any courses -> see the List of the student of the courses";
             } else if (creatState > 0) {
                 HelpResult = "back -> Return to the previous step\n break -> break course creating";
+            } else if (Cli.state.equals("studentCourseList")) {
+                HelpResult = "back -> return to the courseList\nadd + username -> enter an user name of any Student to add the Student to this course\ndel + user name -> enter an user name of any Student in the course to delete this student from this course\ninc + number -> for increase the capacity of the course";
             }
         }
         if (HelpResult.equals("")) {
-            return true;
+            return false;
         }
         System.out.println(HelpResult);
-        return false;
+        return true;
     }
 
     private boolean doWeaveThisCollege(String name) {
@@ -50,7 +53,7 @@ public class CommandHandler {
     }
 
     public boolean creatCollege(Command command) {
-        if (Cli.state.equals("adminPanel")) {
+        if (Cli.state.equals("adminPanel") && creatState == 0) {
             if (command.getCommand().equals("mkdep") && command.getArg() != null) {
                 if (!doWeaveThisCollege(command.getArg())) {
                     university.CreatCollege(command.getArg());
@@ -112,7 +115,7 @@ public class CommandHandler {
     }
 
     public boolean si_or_SU(Command command) {
-        if (command.getArg() == null) {
+        if (command.getArg() == null && Cli.state.equals("sign in or sign up")) {
             if (command.getCommand().equals("signup")) {
                 Cli.state = "sign up";
                 return true;
@@ -125,7 +128,7 @@ public class CommandHandler {
     }
 
     public boolean seeListOfCollege(Command command) {
-        if (Cli.state.equals("studentPanel") || Cli.state.equals("adminPanel")) {
+        if ((Cli.state.equals("studentPanel") || Cli.state.equals("adminPanel")) && creatState == 0) {
             if (command.getArg() == null && command.getCommand().equals("back")) {
                 Cli.state = "sign in";
                 return true;
@@ -142,7 +145,7 @@ public class CommandHandler {
     }
 
     public boolean seetheCourses(Command command) {
-        if (Cli.state.equals("CollegeList")) {
+        if (Cli.state.equals("CollegeList") && creatState == 0) {
             if (command.getCommand().equals("back") && command.getArg() == null && Cli.AmIAdmin) {
                 Cli.state = "adminPanel";
                 return true;
@@ -167,17 +170,20 @@ public class CommandHandler {
             }
             if (!IFindIt && !command.getCommand().equals("help")) {
                 System.out.println("no department with this name");
+            } else if (Cli.AmIAdmin) {
+                Cli.state = "coursesList";
             }
-//            } else if (Cli.AmIAdmin) {
-//                Cli.state = "coursesList";
-//            }
             return true;
         }
         return false;
     }
 
     public boolean seetheStudent(Command command) {
-        if (command.getArg() == null && Cli.state.equals("coursesList")) {
+        if (command.getArg() == null && Cli.state.equals("coursesList") && creatState == 0) {
+            if (command.getCommand().equals("back")) {
+                Cli.state = ("CollegeList");
+                return true;
+            }
             int code;
             try {
                 code = Integer.parseInt(command.getCommand());
@@ -210,7 +216,7 @@ public class CommandHandler {
     }
 
     public boolean addStudentCourse(Command command) {
-        if (Cli.state.equals("studentCourseList")) {
+        if (Cli.state.equals("studentCourseList") && creatState == 0) {
             try {
                 if (command.getCommand().equals("add")) {
                     for (Student student : university.StudentList) {
@@ -219,7 +225,7 @@ public class CommandHandler {
                             return true;
                         }
                     }
-                    System.out.println("no student with this username");
+                    System.out.println("no student with this username found");
                     return true;
                 }
             } catch (NullPointerException n) {
@@ -229,26 +235,36 @@ public class CommandHandler {
         return false;
     }
 
-    public boolean deleteStudent(Command command) {
-        if (Cli.state.equals("studentCourseList")) {
-            try {
-                if (command.getCommand().equals("del")) {
-                    for (Student student : Cli.curentCourse.ListOfStudent) {
-                        if (command.getArg().equals(student.getUserName())) {
-                            System.out.println(student.DeleteCourse(Cli.curentCourse));
-                            return true;
-                        }
-                    }
-                    System.out.println("no  student with this username");
-                    return true;
-                }
-            } catch (NullPointerException n) {
-                return false;
+    public boolean backChecker(Command command) {
+        if (command.getCommand().equals("back")) {
+            if (Cli.state.equals("studentCourseList")) {
+                Cli.curentCourse = null;
+                Cli.state = "coursesList";
+                return true;
             }
         }
         return false;
     }
 
+    //    public boolean deleteStudent(Command command) {
+//        if (Cli.state.equals("studentCourseList") && creatState == 0) {
+//            try {
+//                if (command.getCommand().equals("del")) {
+//                    for (Student student : Cli.curentCourse.ListOfStudent) {
+//                        if (command.getArg().equals(student.getUserName())) {
+//                            System.out.println(student.DeleteCourse(Cli.curentCourse));
+//                            return true;
+//                        }
+//                    }
+//                    System.out.println("no  student with this username");
+//                    return true;
+//                }
+//            } catch (NullPointerException n) {
+//                return false;
+//            }
+//        }
+//        return false;
+//    }
     public boolean addCourse(Command command) {
         if (Cli.state.equals("adminPanel") && Cli.AmIAdmin) {
             if (courseCreatBreak(command) || courseCreatBack(command)) {
@@ -274,13 +290,20 @@ public class CommandHandler {
             } else if (creatState == 3) {
                 System.out.println("capacity:");
                 creatState++;
-                coursesCreat.setUnit(Integer.parseInt(command.getCommand()));
+                try {
+                    coursesCreat.setUnit(Integer.parseInt(command.getCommand()));
+                } catch (NumberFormatException e) {
+                }
                 return true;
 
             } else if (creatState == 4) {
                 System.out.println("teacher name:");
                 creatState++;
-                coursesCreat.setCapacity(Integer.parseInt(command.getCommand()));
+                try {
+                    coursesCreat.setCapacity(Integer.parseInt(command.getCommand()));
+                } catch (NumberFormatException e) {
+                }
+
                 return true;
 
             } else if (creatState == 5) {
@@ -321,7 +344,7 @@ public class CommandHandler {
                 System.out.println(Application.ERROR);
             } else if (creatState == 10) {
                 for (College college : university.collegesList) {
-                    if (college.getName().equals(command.getCommand()) && DoWEHaveThisCourse(college, coursesCreat)) {
+                    if (college.getName().equals(command.getCommand()) && !DoWEHaveThisCourse(college, coursesCreat)) {
                         coursesCreat.setCollege(college);
                         creatState = 0;
                         college.addListOfCourses(new courses(coursesCreat));
@@ -346,8 +369,8 @@ public class CommandHandler {
     }
 
     public boolean increaseCapacityCourse(Command command) {
-        if (Cli.state.equals("studentCourseList")) {
-            if (command.getCommand().equals("capin")) {
+        if (Cli.state.equals("studentCourseList") && creatState == 0) {
+            if (command.getCommand().equals("inc")) {
                 try {
                     int num = Integer.parseInt(command.getArg());
                     Cli.curentCourse.increaseCapacity(num);
@@ -372,7 +395,7 @@ public class CommandHandler {
     }
 
     private boolean courseCreatBack(Command command) {
-        if (command.getCommand().equals("back") && command.getArg() != null) {
+        if (command.getCommand().equals("back") && command.getArg() == null) {
             if (creatState == 2) {
                 System.out.println("name:");
                 creatState--;
@@ -423,6 +446,36 @@ public class CommandHandler {
                 creatState--;
                 return true;
             }
+        }
+        return false;
+    }
+
+    private boolean doWeHaveThisStudent(String userName) {
+        for (Student student : Cli.curentCourse.getListOfStudent()) {
+            if (student.getUserName().equals(userName)) {
+                return true;
+            }
+        }
+        return true;
+    }
+
+    private Student whoIsThisStudent(String userName) {
+        for (Student stu : university.StudentList) {
+            if (stu.getUserName().equals(userName)) {
+                return stu;
+            }
+        }
+        return null;
+    }
+
+    public boolean deleteStudent(Command command) {
+        if (Cli.state.equals("studentCourseList") && command.getCommand().equals("del")) {
+            if (doWeHaveThisStudent(command.getArg())) {
+                System.out.println(whoIsThisStudent(command.getArg()).DeleteCourse(Cli.curentCourse));
+            } else {
+                System.out.println("no student with this user name");
+            }
+            return true;
         }
         return false;
     }

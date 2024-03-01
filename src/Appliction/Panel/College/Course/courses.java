@@ -44,6 +44,7 @@ public class courses {
         Type = type;
         Available = available;
         this.College = college;
+
     }
 
     @Override

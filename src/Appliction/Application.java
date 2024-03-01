@@ -4,8 +4,10 @@ import Appliction.CLI.Cli;
 import Appliction.CLI.Command;
 import Appliction.CLI.CommandHandler;
 import Appliction.Methods.CliMethodNeeded;
+import Appliction.Panel.Student;
 import Appliction.hardcode.addCollegeAndCourses;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application implements Runnable {

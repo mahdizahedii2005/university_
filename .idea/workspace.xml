@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courseCreat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/university.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/university.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -87,6 +83,10 @@
       <workItem from="1708947852187" duration="2418000" />
       <workItem from="1709027581846" duration="6645000" />
       <workItem from="1709064424212" duration="8069000" />
+      <workItem from="1709140703050" duration="4728000" />
+      <workItem from="1709210500222" duration="1520000" />
+      <workItem from="1709222433344" duration="7000" />
+      <workItem from="1709222481759" duration="14204000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />
@@ -117,45 +117,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>14</line>
+          <line>16</line>
           <properties field="ERROR" class="Appliction.Application">
             <option name="WATCH_ACCESS" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java</url>
-          <line>253</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java</url>
-          <line>373</line>
-          <properties class="Appliction.CLI.CommandHandler" method="courseCreatBack">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

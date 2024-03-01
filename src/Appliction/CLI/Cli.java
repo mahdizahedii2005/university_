@@ -8,7 +8,6 @@ import Appliction.Panel.Student;
 import java.util.ArrayList;
 
 public class Cli {
-    private Shell shell;
     public static String state;
     private ArrayList<String> ListOfStates = new ArrayList<>();
     public static Student curentStudent;
@@ -18,7 +17,6 @@ public class Cli {
     public static courses curentCourse;
 
     public Cli() {
-        shell = new Shell();
         commandHandler = new CommandHandler();
         ListOfStates.add("sign in or sign up");
         ListOfStates.add("sign in");
@@ -33,7 +31,10 @@ public class Cli {
 
     public String processCommand(Command command) {
         boolean dihave = commandHandler.help(command);
-        if (commandHandler.SignUp(command) || commandHandler.SignIn(command) ||
+        if (dihave) {
+            return "";
+        }
+        if (commandHandler.backChecker(command) || commandHandler.SignUp(command) || commandHandler.SignIn(command) ||
                 commandHandler.si_or_SU(command) || commandHandler.seeListOfCollege(command) ||
                 commandHandler.seetheCourses(command) || commandHandler.addCourse(command) ||
                 commandHandler.addStudentCourse(command) || commandHandler.seetheStudent(command) ||
@@ -41,11 +42,7 @@ public class Cli {
                 commandHandler.increaseCapacityCourse(command)) {
             return "";
         } else {
-            if (dihave) {
-                return Application.ERROR;
-            } else {
-                return "";
-            }
+            return Application.ERROR + "\n";
         }
     }
 
@@ -70,6 +67,8 @@ public class Cli {
             }
         } else if (state.equals("coursesList")) {
             header = "adminPanel//departmentList//" + curentCollege.getName() + "//";
+        } else if (state.equals("studentCourseList")) {
+            header = "adminPanel//departmentList//" + curentCollege.getName() + "//" + curentCourse.getName() + "//";
         }
         return header;
     }
