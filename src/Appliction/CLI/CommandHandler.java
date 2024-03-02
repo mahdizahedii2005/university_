@@ -479,4 +479,66 @@ public class CommandHandler {
         }
         return false;
     }
+
+    public boolean StudentPikeCourse(Command command) {
+        if (!Cli.AmIAdmin && Cli.state.equals("coursesList")) {
+            if (command.getCommand().equals("add")) {
+                for (courses cou : Cli.curentCollege.getListOfCourses()) {
+                    try {
+                        if (Integer.parseInt(command.getArg()) == (cou.getCode())) {
+                            Cli.curentStudent.PikeCourses(cou);
+                            return true;
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("pleas enter a number");
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean StudentSeeOwnPikedCourse(Command command) {
+        if (Cli.state.equals("studentPanel")) {
+            if (command.getCommand().equals("lpc") && command.getArg() == null) {
+                if (Cli.curentStudent.getCoursesArrayList().isEmpty()) {
+                    System.out.println("you dont piked any courses");
+                    return true;
+                }
+                System.out.println("List of your course->");
+                System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu");
+                for (courses cou : Cli.curentStudent.getCoursesArrayList()) {
+                    System.out.println(cou);
+                }
+                Cli.state = "ownCourse";
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean DeleteOwnCoursePiked(Command command) {
+        if (Cli.state.equals("ownCourse")) {
+            if (command.getCommand().equals("back")){
+                Cli.state = "studentPanel";
+                return true;
+            }
+            if (command.getCommand().equals("del") && command.getArg() != null) {
+                for (courses cou : Cli.curentStudent.getCoursesArrayList()) {
+                    try {
+                        if (Integer.parseInt(command.getArg()) == cou.getCode()) {
+                            Cli.curentStudent.DeleteCourse(cou);
+                            StudentSeeOwnPikedCourse(new Command("lpc"));
+                            return true;
+                        }
+                    } catch (NumberFormatException r) {
+                        System.out.println("please enter correct input(NumberFormatException)");
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 }

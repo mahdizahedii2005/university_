@@ -39,7 +39,9 @@ public class Cli {
                 commandHandler.seetheCourses(command) || commandHandler.addCourse(command) ||
                 commandHandler.addStudentCourse(command) || commandHandler.seetheStudent(command) ||
                 commandHandler.deleteStudent(command) || commandHandler.creatCollege(command) ||
-                commandHandler.increaseCapacityCourse(command)) {
+                commandHandler.increaseCapacityCourse(command)||commandHandler.StudentSeeOwnPikedCourse(command)||
+                commandHandler.DeleteOwnCoursePiked(command)||commandHandler.StudentPikeCourse(command)
+        ) {
             return "";
         } else {
             return Application.ERROR + "\n";
