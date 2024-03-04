@@ -14,6 +14,6 @@ return to the login page
 
 Student:
 //see the courses
-piked the courses
-delete the piked courses
-see the piked course
+//piked the courses
+//delete the piked courses
+//see the piked course

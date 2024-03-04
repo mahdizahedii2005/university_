@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
+      <change afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guide.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Desktop/programing/java/Self_learn/ALi.pera/src/Main.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Desktop/programing/java/Ap/first_practice/first_peractice/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desktop/programing/java/Self_learn/ALi.pera/src/Main.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Desktop/programing/java/Ap/first_practice/first_peractice/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +94,9 @@
       <workItem from="1709210500222" duration="1520000" />
       <workItem from="1709222433344" duration="7000" />
       <workItem from="1709222481759" duration="14549000" />
-      <workItem from="1709370631390" duration="2524000" />
+      <workItem from="1709370631390" duration="2695000" />
+      <workItem from="1709391030266" duration="7651000" />
+      <workItem from="1709460415095" duration="6593000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />
@@ -115,13 +125,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>16</line>
-          <properties field="ERROR" class="Appliction.Application">
-            <option name="WATCH_ACCESS" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
+          <line>33</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

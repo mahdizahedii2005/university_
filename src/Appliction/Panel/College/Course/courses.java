@@ -13,6 +13,9 @@ public class courses {
     private final String teacher, name, StartTime, examTime, examDate, Type;
     private boolean Available;
 
+    public String fileprint(){
+        return code + ":" + getCollege();
+    }
     public courses(courseCreat courseCreat) {
         this.numberOfStudent = 0;
         this.capacity = courseCreat.getCapacity();
@@ -27,8 +30,9 @@ public class courses {
         Available = true;
         this.College = courseCreat.getCollege();
     }
-    public courseCreat getCreatCourse(){
-        return new courseCreat(numberOfStudent,capacity,code,Unit,College,teacher,name,StartTime,examTime,examDate,Type,Available);
+
+    public courseCreat getCreatCourse() {
+        return new courseCreat(numberOfStudent, capacity, code, Unit, College, teacher, name, StartTime, examTime, examDate, Type, Available);
     }
 
     public courses(int capacity, int code, int Unit, String teacher, String name, String startTime, String examTime, String examDate, String type, boolean available, College college) {
@@ -49,7 +53,7 @@ public class courses {
 
     @Override
     public String toString() {
-        return name + " :: " + code + " , " + Unit + " , " + teacher + " , " + StartTime + " , " + examDate + " , " + examTime + " , " + Type + " , " + capacity + " , " + numberOfStudent;
+        return name + " :: " + code + " , " + Unit + " , " + teacher + " , " + StartTime + " , " + examDate + " , " + examTime + " , " + Type + " , " + capacity + " , " + numberOfStudent + " , " + getCollege();
 
     }
 

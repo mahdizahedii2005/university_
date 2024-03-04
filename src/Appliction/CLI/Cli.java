@@ -71,6 +71,8 @@ public class Cli {
             header = "adminPanel//departmentList//" + curentCollege.getName() + "//";
         } else if (state.equals("studentCourseList")) {
             header = "adminPanel//departmentList//" + curentCollege.getName() + "//" + curentCourse.getName() + "//";
+        } else if (state.equals("ownCourse")) {
+            header = curentStudent.getUserName() + "Panel//" +"Picked course//";
         }
         return header;
     }

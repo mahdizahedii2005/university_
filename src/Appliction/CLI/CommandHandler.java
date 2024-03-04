@@ -16,24 +16,29 @@ public class CommandHandler {
     public boolean help(Command command) {
         String HelpResult = "";
         if (command.getCommand().equals("help") && command.getArg() == null) {
+            HelpResult = "loginstate - > return to the login\nexecute -> to stop the program\n";
             if (Cli.state.equals("sign in or sign up")) {
-                HelpResult = "signin -> enter to your account\nsignup -> creat an account";
+                HelpResult += "signin -> enter to your account\nsignup -> creat an account";
             } else if (Cli.state.equals("sign in")) {
-                HelpResult = "back -> back to the sign in or sign up state\nenter a user name and password of your account";
+                HelpResult += "back -> back to the sign in or sign up state\nenter a user name and password of your account";
             } else if (Cli.state.equals("sign up")) {
-                HelpResult = "back -> back to the sign in or sign up state\nenter a user name and password that you want for your account";
+                HelpResult += "back -> back to the sign in or sign up state\nenter a user name and password that you want for your account";
             } else if (Cli.state.equals("adminPanel")) {
-                HelpResult = "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\n";//todo
+                HelpResult += "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\n";//todo
             } else if (Cli.state.equals("studentPanel")) {
-                HelpResult = "back -> back to the sign in\nld -> for see the list of the Department\n";//todo
+                HelpResult += "back -> back to the sign in\nld -> for see the list of the Department\nlpc -> to see your picked course";//todo
             } else if (Cli.state.equals("CollegeList")) {
-                HelpResult = "back -> back to the Panel state\nname any department -> see the department courses";
-            } else if (Cli.state.equals("coursesList")) {
-                HelpResult = "back -> back to the departmentList state\ncode of any courses -> see the List of the student of the courses";
+                HelpResult += "back -> back to the Panel state\nname any department -> see the department courses";
+            } else if (Cli.state.equals("coursesList") && Cli.AmIAdmin) {
+                HelpResult += "back -> back to the departmentList state\ncode of any courses -> see the List of the student of the courses";
+            } else if (Cli.state.equals("coursesList") && !Cli.AmIAdmin) {
+                HelpResult += "back -> back to the departmentList state\nadd + code -> to pick the course";
             } else if (creatState > 0) {
-                HelpResult = "back -> Return to the previous step\n break -> break course creating";
+                HelpResult += "back -> Return to the previous step\n break -> break course creating";
             } else if (Cli.state.equals("studentCourseList")) {
-                HelpResult = "back -> return to the courseList\nadd + username -> enter an user name of any Student to add the Student to this course\ndel + user name -> enter an user name of any Student in the course to delete this student from this course\ninc + number -> for increase the capacity of the course";
+                HelpResult += "back -> return to the courseList\nadd + username -> enter an user name of any Student to add the Student to this course\ndel + user name -> enter an user name of any Student in the course to delete this student from this course\ninc + number -> for increase the capacity of the course";
+            } else if (Cli.state.equals("ownCourse")) {
+                HelpResult += "back -> return to the Panel\ndel + course code -> enter  del +an code to delete that course from of your Picked List Course";
             }
         }
         if (HelpResult.equals("")) {
@@ -162,7 +167,7 @@ public class CommandHandler {
                         System.out.println("no courses for this college");
                         return true;
                     }
-                    System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu");
+                    System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu,department");
                     for (courses cou : c.getListOfCourses()) {
                         System.out.println(cou);
                     }
@@ -170,7 +175,7 @@ public class CommandHandler {
             }
             if (!IFindIt && !command.getCommand().equals("help")) {
                 System.out.println("no department with this name");
-            } else if (Cli.AmIAdmin) {
+            } else if (!Cli.AmIAdmin) {
                 Cli.state = "coursesList";
             }
             return true;
@@ -246,6 +251,17 @@ public class CommandHandler {
         return false;
     }
 
+    private boolean doWeaveThiscode(int code) {
+        for (College college : university.collegesList) {
+            for (courses cou : college.getListOfCourses()) {
+                if (code == cou.getCode()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     //    public boolean deleteStudent(Command command) {
 //        if (Cli.state.equals("studentCourseList") && creatState == 0) {
 //            try {
@@ -282,11 +298,21 @@ public class CommandHandler {
                 return true;
 
             } else if (creatState == 2) {
-                System.out.println("Unit:");
-                creatState++;
-                coursesCreat.setCode(Integer.parseInt(command.getCommand()));
-                return true;
-
+                try {
+                    if (doWeaveThiscode(Integer.parseInt(command.getCommand()))) {
+                        System.out.println("Unit:");
+                        creatState++;
+                        coursesCreat.setCode(Integer.parseInt(command.getCommand()));
+                        return true;
+                    } else {
+                        System.out.println("this code is already use by another course (Please try a new code:)");
+                        return true;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("please enter correct input(NumberFormatException)");
+                    System.out.println("code:");
+                    return true;
+                }
             } else if (creatState == 3) {
                 System.out.println("capacity:");
                 creatState++;
@@ -456,7 +482,7 @@ public class CommandHandler {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     private Student whoIsThisStudent(String userName) {
@@ -486,7 +512,7 @@ public class CommandHandler {
                 for (courses cou : Cli.curentCollege.getListOfCourses()) {
                     try {
                         if (Integer.parseInt(command.getArg()) == (cou.getCode())) {
-                            Cli.curentStudent.PikeCourses(cou);
+                            System.out.println(Cli.curentStudent.PikeCourses(cou));
                             return true;
                         }
                     } catch (NumberFormatException e) {
@@ -503,11 +529,11 @@ public class CommandHandler {
         if (Cli.state.equals("studentPanel")) {
             if (command.getCommand().equals("lpc") && command.getArg() == null) {
                 if (Cli.curentStudent.getCoursesArrayList().isEmpty()) {
-                    System.out.println("you dont piked any courses");
+                    System.out.println("your Picked List is empty");
                     return true;
                 }
                 System.out.println("List of your course->");
-                System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu");
+                System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examTime,type,capacity,numOfStu,department");
                 for (courses cou : Cli.curentStudent.getCoursesArrayList()) {
                     System.out.println(cou);
                 }
@@ -520,23 +546,26 @@ public class CommandHandler {
 
     public boolean DeleteOwnCoursePiked(Command command) {
         if (Cli.state.equals("ownCourse")) {
-            if (command.getCommand().equals("back")){
+            if (command.getCommand().equals("back")) {
                 Cli.state = "studentPanel";
                 return true;
             }
             if (command.getCommand().equals("del") && command.getArg() != null) {
-                for (courses cou : Cli.curentStudent.getCoursesArrayList()) {
-                    try {
+                try {
+                    for (courses cou : Cli.curentStudent.getCoursesArrayList()) {
                         if (Integer.parseInt(command.getArg()) == cou.getCode()) {
-                            Cli.curentStudent.DeleteCourse(cou);
+                            System.out.println(Cli.curentStudent.DeleteCourse(cou));
+                            Cli.state = ("studentPanel");
                             StudentSeeOwnPikedCourse(new Command("lpc"));
                             return true;
                         }
-                    } catch (NumberFormatException r) {
-                        System.out.println("please enter correct input(NumberFormatException)");
-                        return true;
                     }
+                } catch (NumberFormatException r) {
+                    System.out.println("please enter correct input(NumberFormatException)");
+                    return true;
                 }
+                System.out.println("no course found with this username(try a correct course code)");
+                return true;
             }
         }
         return false;

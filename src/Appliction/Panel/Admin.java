@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Admin extends Panel {
     public Admin(String userName, String password, boolean access) {
-        super(userName, password, access);
+        super(userName, password);
     }
 
     public void creat_courses(int capacity, int code, int Unit, String teacher, String name, String startTime, String examTime, String examDate, String type, boolean available, College college) {

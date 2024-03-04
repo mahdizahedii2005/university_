@@ -9,8 +9,14 @@ public class Student extends Panel {
     private int general_unit = 0;
     private ArrayList<courses> coursesArrayList = new ArrayList<>();
 
+    public void restart() {
+        general_unit = 0;
+        Units_piked = 0;
+        coursesArrayList = new ArrayList<>();
+    }
+
     public Student(String userName, String password, boolean access) {
-        super(userName, password, access);
+        super(userName, password);
         university.StudentList.add(this);
     }
 
@@ -28,7 +34,7 @@ public class Student extends Panel {
             } else if (courses.getUnit() + Units_piked > 20) {
                 return "The operation was not successful(limit of 20 unit)";
             } else if (courses.getCapacity() < courses.getNumberOfStudent() + 1) {
-                return "The operation was not successful(limit capacity limit)";
+                return "The operation was not successful(capacity limit)";
             } else if (checkExamTime(courses)) {
                 return "The operation was not successful(Exam time interference)";
             } else if (checkClassTime(courses)) {
@@ -87,7 +93,7 @@ public class Student extends Panel {
 
     private boolean checkExamTime(courses courses) {
         for (courses coursesPiked : coursesArrayList) {
-            if (coursesPiked.getExamTime().equals(courses.getStartTime())) {
+            if (coursesPiked.getExamTime().equals(courses.getExamTime()) && coursesPiked.getExamDate().equals(courses.getExamDate())) {
                 return true;
             }
         }
