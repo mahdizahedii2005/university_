@@ -25,11 +25,15 @@ public class Application implements Runnable {
 
     @Override
     public void run() {
+        boolean first = true;
         new addCollegeAndCourses().run();
         while (true) {
             try {
-                for (Student student : university.StudentList) {
-                    StudentSave.loud_Student(student);
+                if (!first) {
+                    for (Student student : university.StudentList) {
+                        StudentSave.loud_Student(student);
+                    }
+                    first = false;
                 }
                 if (CommandHandler.creatState == 0) {
                     System.out.print(cli.getHeader());

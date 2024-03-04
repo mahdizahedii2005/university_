@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402109731.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402109731.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402199931.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402199931.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402715155.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402715155.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402777781.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402777781.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +92,8 @@
       <workItem from="1709370631390" duration="2695000" />
       <workItem from="1709391030266" duration="7651000" />
       <workItem from="1709460415095" duration="6593000" />
+      <workItem from="1709545912627" duration="353000" />
+      <workItem from="1709552580594" duration="339000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />
@@ -121,16 +118,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
     <option name="LAST_COMMIT_MESSAGE" value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/Application.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
