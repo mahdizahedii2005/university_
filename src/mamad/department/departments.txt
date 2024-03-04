@@ -1,0 +1,15 @@
+!math
+bp :: 20026 , 1 , dr.mohamadi , 10:00 , 1403/3/30 , 09:00 , general , 30 , 4 , math
+ap :: 25026 , 1 , dr.mostajeran , 11:00 , 1403/3/10 , 09:00 , general , 70 , 4 , math
+jabr :: 25726 , 1 , dr.pornaki , 01:00 , 1403/3/10 , 09:00 , t , 10 , 0 , math
+#
+!phicis
+bp :: 2026 , 1 , dr.mohamadi , 10:00 , 1403/3/30 , 09:00 , general , 30 , 0 , phicis
+ap :: 2026 , 1 , dr.mostajeran , 11:00 , 1403/3/10 , 09:00 , general , 70 , 0 , phicis
+jabr :: 2726 , 1 , dr.pornaki , 01:00 , 1403/3/10 , 09:00 , t , 10 , 0 , phicis
+#
+!ce
+bp :: 20126 , 1 , dr.mohamadi , 18:00 , 1402/3/30 , 09:00 , t , 30 , 4 , ce
+ap :: 20526 , 1 , dr.mostajeran , 01:00 , 1405/3/10 , 09:00 , t , 70 , 4 , ce
+jabr :: 21726 , 1 , dr.pornaki , 16:00 , 1404/3/10 , 09:00 , t , 10 , 4 , ce
+#

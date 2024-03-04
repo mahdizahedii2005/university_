@@ -15,18 +15,24 @@ import java.util.Scanner;
 
 public class StudentSave {
     public static void save_Student(Student student) {
-        File Fi = new File("src\\Appliction\\saveData\\StudentFile\\" + student.getUserName() + ".txt");
+        save_Student(student,"src\\Appliction\\saveData");
+    }
+
+    public static void save_Student(Student student,String add) {
+        File ni = new File(add);
+        ni.mkdir();
+        File Fi = new File(ni.getAbsolutePath()+"\\StudentFile\\"+student.getUserName()+".txt");
         try {
-        if (!Fi.exists()) {
-            if (!Fi.createNewFile()) {
-                System.out.println("icant handle the save");
+            if (!Fi.exists()) {
+                if (!Fi.createNewFile()) {
+                    System.out.println("icant handle the save");
+                }
             }
-        }
-        FileWriter Print_auto_save_file;
-        PrintWriter print_auto_save;
+            FileWriter Print_auto_save_file;
+            PrintWriter print_auto_save;
 
             Print_auto_save_file = new FileWriter(Fi);
-            print_auto_save = new PrintWriter(Print_auto_save_file ,true);
+            print_auto_save = new PrintWriter(Print_auto_save_file, true);
             for (courses cou : student.getCoursesArrayList()) {
                 print_auto_save.println(cou.fileprint());
             }
