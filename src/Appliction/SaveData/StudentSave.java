@@ -15,13 +15,14 @@ import java.util.Scanner;
 
 public class StudentSave {
     public static void save_Student(Student student) {
-        save_Student(student,"src\\Appliction\\saveData");
+        File file = new File("src\\Appliction\\saveData");
+        save_Student(student, file);
     }
 
-    public static void save_Student(Student student,String add) {
-        File ni = new File(add);
+    public static void save_Student(Student student, File file) {
+        File ni = new File(file.getAbsolutePath() + "\\StudentFile");
         ni.mkdir();
-        File Fi = new File(ni.getAbsolutePath()+"\\StudentFile\\"+student.getUserName()+".txt");
+        File Fi = new File(ni.getAbsolutePath() +"\\"+ student.getUserName() + ".txt");
         try {
             if (!Fi.exists()) {
                 if (!Fi.createNewFile()) {

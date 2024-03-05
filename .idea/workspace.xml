@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
-      <change afterPath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentSave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mamad/department/departments.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <workItem from="1709391030266" duration="7651000" />
       <workItem from="1709460415095" duration="6593000" />
       <workItem from="1709545912627" duration="353000" />
-      <workItem from="1709552580594" duration="3626000" />
+      <workItem from="1709552580594" duration="3778000" />
+      <workItem from="1709641465708" duration="2347000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />

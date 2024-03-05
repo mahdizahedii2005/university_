@@ -6,7 +6,6 @@ import Appliction.Panel.College.Course.*;
 import Appliction.Panel.Student;
 import UserNamePassword.SignIn_UpHandler;
 import Appliction.Panel.university;
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 public class CommandHandler {
     courseCreat coursesCreat = new courseCreat();
@@ -16,7 +15,7 @@ public class CommandHandler {
     public boolean help(Command command) {
         String HelpResult = "";
         if (command.getCommand().equals("help") && command.getArg() == null) {
-            HelpResult = "loginstate - > return to the login\nexecute -> to stop the program\n";
+            HelpResult = "loginstate - > go to the login state\nexecute -> to stop the program\n";
             if (Cli.state.equals("sign in or sign up")) {
                 HelpResult += "signin -> enter to your account\nsignup -> creat an account";
             } else if (Cli.state.equals("sign in")) {
@@ -261,7 +260,6 @@ public class CommandHandler {
         }
         return false;
     }
-
     //    public boolean deleteStudent(Command command) {
 //        if (Cli.state.equals("studentCourseList") && creatState == 0) {
 //            try {

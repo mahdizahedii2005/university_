@@ -20,9 +20,7 @@ public class AdminSave {
 
     private void printDepartment(File fille) {
         try {
-            File file1 = new File(fille.getAbsolutePath() + "\\department");
-            file1.mkdirs();
-            File file = new File(file1.getAbsolutePath() + "\\departments.txt");
+            File file = new File(fille.getAbsolutePath() + "\\departments.txt");
             file.createNewFile();
             FileWriter fileWriter = new FileWriter(file);
             PrintWriter printWriter = new PrintWriter(fileWriter, true);
@@ -35,18 +33,19 @@ public class AdminSave {
         }
     }
 
-    private void printListOfStudent(File file, String addr) {
+    private void printListOfStudent(File file) {
         for (Student student : university.StudentList) {
-            StudentSave.save_Student(student);
+            StudentSave.save_Student(student,file);
         }
     }
 
     public void Export(String addr) {
-        File file = new File(addr);
+        File file1 = new File(addr);
+        File file = new File(file1.getAbsolutePath() + "\\saves");
         file.mkdirs();
         if (file.exists()) {
             printDepartment(file);
-            printListOfStudent(file, addr);
+            printListOfStudent(file);
         } else {
             System.out.println("cant find the file in this address");
         }
