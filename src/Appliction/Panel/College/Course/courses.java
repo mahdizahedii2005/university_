@@ -13,9 +13,28 @@ public class courses {
     private final String teacher, name, StartTime, examTime, examDate, Type;
     private boolean Available;
 
-    public String fileprint(){
+    public String fileprint() {
         return code + ":" + getCollege();
     }
+
+    public courses(String[] vorodi, College college) {
+        this.code = Integer.parseInt(vorodi[1]);
+        Unit = Integer.parseInt(vorodi[2]);
+        College = college;
+        this.teacher = vorodi[3];
+        this.name = vorodi[0];
+        StartTime = vorodi[4];
+        this.examTime = vorodi[6];
+        this.examDate = vorodi[5];
+        Type = vorodi[7];
+        this.capacity = Integer.parseInt(vorodi[8]);
+        this.numberOfStudent = 0;
+    }
+
+    public String printAlldatail() {
+        return name + "," + code + "," + Unit + "," + teacher + "," + StartTime + "," + examDate + "," + examTime + "," + Type + "," + capacity + "," + numberOfStudent + "," + getCollege();
+    }
+
     public courses(courseCreat courseCreat) {
         this.numberOfStudent = 0;
         this.capacity = courseCreat.getCapacity();

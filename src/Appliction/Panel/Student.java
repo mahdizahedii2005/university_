@@ -15,7 +15,7 @@ public class Student extends Panel {
         coursesArrayList = new ArrayList<>();
     }
 
-    public Student(String userName, String password, boolean access) {
+    public Student(String userName, String password) {
         super(userName, password);
         university.StudentList.add(this);
     }

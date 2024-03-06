@@ -9,6 +9,10 @@ public class university {
     public static ArrayList<Student> StudentList = new ArrayList<>();
     private String name;
 
+    public static void restart() {
+        collegesList = new ArrayList<>();
+        StudentList = new ArrayList<>();
+    }
     public university(String name) {
         this.name = name;
     }

@@ -8,10 +8,10 @@ import Appliction.Panel.university;
 public class addCollegeAndCourses extends HardCode {
     @Override
     public void run() {
-        Student d1c = new Student("402109731", "1234", true);
-        Student d2 = new Student("402715155", "1234", true);
-        Student d3 = new Student("402777781", "1234", true);
-        Student d4 = new Student("402199931", "1234", true);
+        Student d1c = new Student("402109731", "1234");
+        Student d2 = new Student("402715155", "1234");
+        Student d3 = new Student("402777781", "1234");
+        Student d4 = new Student("402199931", "1234");
         College math = university.CreatCollege("math");
         math.addListOfCourses(new courses(30, 20026, 1, "dr.mohamadi", "bp", "10:00", "09:00", "1403/3/30", "general", true, math));
         math.addListOfCourses(new courses(70, 25026, 1, "dr.mostajeran", "ap", "11:00", "09:00", "1403/3/10", "general", true, math));

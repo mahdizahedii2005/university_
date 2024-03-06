@@ -37,6 +37,24 @@ public class SignIn_UpHandler {
         return false;
     }
 
+    public String GiveMEPass(String username) {
+        while (ScannerPass.hasNextLine()) {
+            String[] line = ScannerPass.nextLine().split(" ");
+            if (line[0].equals(username)) {
+                try {
+                    this.ScannerPass = new Scanner(passFile);
+                } catch (IOException d) {
+                }
+                return line[1];
+            }
+        }
+        try {
+            this.ScannerPass = new Scanner(passFile);
+        } catch (IOException d) {
+        }
+        return null;
+    }
+
     public void AddPerson(String UserName, String Password) {
         writerPass.println(UserName + " " + Password);
     }
