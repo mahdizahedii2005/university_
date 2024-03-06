@@ -6,6 +6,7 @@ import Appliction.CLI.CommandHandler;
 import Appliction.Methods.CliMethodNeeded;
 import Appliction.Panel.Student;
 import Appliction.Panel.university;
+import Appliction.SaveData.AdminSave;
 import Appliction.SaveData.StudentSave;
 import Appliction.hardcode.addCollegeAndCourses;
 
@@ -27,6 +28,7 @@ public class Application implements Runnable {
     public void run() {
         boolean first = true;
         new addCollegeAndCourses().run();
+        new AdminSave().Import("src\\Appliction\\Savedata");
         while (true) {
             try {
                 if (!first) {

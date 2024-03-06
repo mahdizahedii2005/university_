@@ -56,21 +56,29 @@ public class SignIn_UpHandler {
     }
 
     public void AddPerson(String UserName, String Password) {
-        writerPass.println(UserName + " " + Password);
+        if (UserName != null && Password != null) {
+            writerPass.println(UserName + " " + Password);
+        } else {
+            System.out.println("cant add (you dont enter password)");
+        }
     }
 
     public boolean IsThisPersonValid(String userName, String Password) {
-        while (ScannerPass.hasNextLine()) {
-            String line = ScannerPass.nextLine();
-            String RealUserName = CliMethodNeeded.ReturnFirstWord(line);
-            String RealPassword = CliMethodNeeded.ReturnSecondWord(line);
-            if (RealPassword.equals(Password) && RealUserName.equals(userName)) {
-                try {
-                    this.ScannerPass = new Scanner(passFile);
-                } catch (IOException d) {
+        try {
+            ScannerPass = new Scanner(passFile);
+            while (ScannerPass.hasNextLine()) {
+                String line = ScannerPass.nextLine();
+                String RealUserName = CliMethodNeeded.ReturnFirstWord(line);
+                String RealPassword = CliMethodNeeded.ReturnSecondWord(line);
+                if (RealPassword.equals(Password) && RealUserName.equals(userName)) {
+                    try {
+                        this.ScannerPass = new Scanner(passFile);
+                    } catch (IOException d) {
+                    }
+                    return true;
                 }
-                return true;
             }
+        } catch (IOException i) {
         }
         try {
             this.ScannerPass = new Scanner(passFile);

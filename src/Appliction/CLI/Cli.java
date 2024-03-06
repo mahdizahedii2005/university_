@@ -39,8 +39,9 @@ public class Cli {
                 commandHandler.seetheCourses(command) || commandHandler.addCourse(command) ||
                 commandHandler.addStudentCourse(command) || commandHandler.seetheStudent(command) ||
                 commandHandler.deleteStudent(command) || commandHandler.creatCollege(command) ||
-                commandHandler.increaseCapacityCourse(command)||commandHandler.StudentSeeOwnPikedCourse(command)||
-                commandHandler.DeleteOwnCoursePiked(command)||commandHandler.StudentPikeCourse(command)
+                commandHandler.increaseCapacityCourse(command) || commandHandler.StudentSeeOwnPikedCourse(command) ||
+                commandHandler.DeleteOwnCoursePiked(command) || commandHandler.StudentPikeCourse(command) ||
+                commandHandler.Importt(command) || commandHandler.Export(command)
         ) {
             return "";
         } else {
@@ -72,7 +73,7 @@ public class Cli {
         } else if (state.equals("studentCourseList")) {
             header = "adminPanel//departmentList//" + curentCollege.getName() + "//" + curentCourse.getName() + "//";
         } else if (state.equals("ownCourse")) {
-            header = curentStudent.getUserName() + "Panel//" +"Picked course//";
+            header = curentStudent.getUserName() + "Panel//" + "Picked course//";
         }
         return header;
     }

@@ -4,6 +4,7 @@ import Appliction.Application;
 import Appliction.Panel.College.College;
 import Appliction.Panel.College.Course.*;
 import Appliction.Panel.Student;
+import Appliction.SaveData.AdminSave;
 import UserNamePassword.SignIn_UpHandler;
 import Appliction.Panel.university;
 
@@ -23,7 +24,7 @@ public class CommandHandler {
             } else if (Cli.state.equals("sign up")) {
                 HelpResult += "back -> back to the sign in or sign up state\nenter a user name and password that you want for your account";
             } else if (Cli.state.equals("adminPanel")) {
-                HelpResult += "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\n";//todo
+                HelpResult += "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\nimport + path -> for save the information of the university to this path\nexport + path -> for load the information of university in this path";
             } else if (Cli.state.equals("studentPanel")) {
                 HelpResult += "back -> back to the sign in\nld -> for see the list of the Department\nlpc -> to see your picked course";//todo
             } else if (Cli.state.equals("CollegeList")) {
@@ -45,6 +46,32 @@ public class CommandHandler {
         }
         System.out.println(HelpResult);
         return true;
+    }
+
+    public boolean Importt(Command command) {
+        try {
+
+            if (Cli.state.equals("adminPanel") && Cli.AmIAdmin && command.getCommand().equals("import")) {
+                AdminSave adminSave = new AdminSave();
+                adminSave.Import(command.getArg());
+                return true;
+            }
+        } catch (NullPointerException n) {
+
+        }
+        return false;
+    }
+
+    public boolean Export(Command command) {
+        try {
+            if (Cli.state.equals("adminPanel") && Cli.AmIAdmin && command.getCommand().equals("export")) {
+                AdminSave adminSave = new AdminSave();
+                adminSave.Export(command.getArg());
+                return true;
+            }
+        } catch (NullPointerException n) {
+        }
+        return false;
     }
 
     private boolean doWeaveThisCollege(String name) {
@@ -83,6 +110,9 @@ public class CommandHandler {
                 return true;
             }
             signInUpHandler.AddPerson(command.getCommand(), command.getArg());
+            new Student(command.getCommand(), command.getArg());
+            AdminSave adminSave = new AdminSave();
+            adminSave.Export("src\\Appliction\\Savedata");
             Cli.state = "sign in or sign up";
             return true;
         }
@@ -260,6 +290,7 @@ public class CommandHandler {
         }
         return false;
     }
+
     //    public boolean deleteStudent(Command command) {
 //        if (Cli.state.equals("studentCourseList") && creatState == 0) {
 //            try {
