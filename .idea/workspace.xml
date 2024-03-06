@@ -6,21 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mamad/saves/StudentFile/402109731.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mamad/saves/StudentFile/402199931.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mamad/saves/StudentFile/402715155.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mamad/saves/StudentFile/402777781.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mamad/saves/departments.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402109731.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402109731.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402199931.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402199931.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402715155.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402715155.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402777781.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/402777781.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/SignIn_UpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/saves/StudentFile/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/saves/StudentFile/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/saves/departments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/saves/departments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserNamePassword/pass_and_username.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +98,7 @@
       <workItem from="1709552580594" duration="3778000" />
       <workItem from="1709641465708" duration="2409000" />
       <workItem from="1709665780574" duration="8547000" />
-      <workItem from="1709735580866" duration="5618000" />
+      <workItem from="1709735580866" duration="13121000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />
@@ -131,16 +123,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
     <option name="LAST_COMMIT_MESSAGE" value="fix hard code and some student to hard code and password and user name  and add dee the student to code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java</url>
-          <line>162</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,7 +1,7 @@
 !civil
-bp,10202,3,dr.mohamadi,10:00,1403/3/30,09:00,general,30,4,civil
+bp,10202,3,dr.mohamadi,10:00,1403/3/30,09:00,general,30,5,civil
 ap,85285,3,dr.mostajeran,11:00,1403/3/10,09:00,general,70,0,civil
-jabr,77787,10,dr.pornaki,01:00,1403/3/10,09:00,t,10,4,civil
+jabr,77787,10,dr.pornaki,01:00,1403/3/10,09:00,t,10,5,civil
 #
 !math
 bp,20026,1,dr.mohamadi,10:00,1403/3/30,09:00,general,30,0,math

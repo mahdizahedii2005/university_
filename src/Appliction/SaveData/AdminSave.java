@@ -36,7 +36,7 @@ public class AdminSave {
         }
     }
 
-    private void printListOfStudent(File file) {
+    public void printListOfStudent(File file) {
         for (Student student : university.StudentList) {
             StudentSave.save_Student(student, file);
         }

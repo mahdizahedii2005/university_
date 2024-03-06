@@ -10,6 +10,7 @@ import Appliction.SaveData.AdminSave;
 import Appliction.SaveData.StudentSave;
 import Appliction.hardcode.addCollegeAndCourses;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Application implements Runnable {
@@ -65,6 +66,7 @@ public class Application implements Runnable {
                 System.out.println(ERROR);
             }
         }
+        new AdminSave().printListOfStudent(new File("src\\Appliction\\Savedata" + "\\saves"));
         System.out.println("TANKS FOR USING THIS APP");
         System.out.println("Written by MAHDI :)");
     }

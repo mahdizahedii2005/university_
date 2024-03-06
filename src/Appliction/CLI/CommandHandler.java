@@ -111,8 +111,7 @@ public class CommandHandler {
             }
             signInUpHandler.AddPerson(command.getCommand(), command.getArg());
             new Student(command.getCommand(), command.getArg());
-            AdminSave adminSave = new AdminSave();
-            adminSave.Export("src\\Appliction\\Savedata");
+            new AdminSave().Export(("src\\Appliction\\Savedata"));
             Cli.state = "sign in or sign up";
             return true;
         }
@@ -168,6 +167,7 @@ public class CommandHandler {
                 return true;
             }
             if (command.getArg() == null && command.getCommand().equals("ld")) {
+                System.out.println("List of the department of university:");
                 for (College c : university.collegesList) {
                     System.out.println(c);
                 }
@@ -196,7 +196,8 @@ public class CommandHandler {
                         System.out.println("no courses for this college");
                         return true;
                     }
-                    System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu,department");
+                    System.out.println("List of the course of the "+Cli.curentCollege+"department");
+                    System.out.println("NAME ->code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu,department");
                     for (courses cou : c.getListOfCourses()) {
                         System.out.println(cou);
                     }
@@ -213,7 +214,7 @@ public class CommandHandler {
     }
 
     public boolean seetheStudent(Command command) {
-        if (command.getArg() == null && Cli.state.equals("coursesList") && creatState == 0) {
+        if (command.getArg() == null && Cli.state.equals("coursesList") && creatState == 0&&Cli.AmIAdmin) {
             if (command.getCommand().equals("back")) {
                 Cli.state = ("CollegeList");
                 return true;
@@ -537,6 +538,10 @@ public class CommandHandler {
 
     public boolean StudentPikeCourse(Command command) {
         if (!Cli.AmIAdmin && Cli.state.equals("coursesList")) {
+            if (command.getCommand().equals("back")){
+                Cli.state="CollegeList";
+                return true;
+            }
             if (command.getCommand().equals("add")) {
                 for (courses cou : Cli.curentCollege.getListOfCourses()) {
                     try {
