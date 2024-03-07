@@ -41,7 +41,7 @@ public class Cli {
                 commandHandler.deleteStudent(command) || commandHandler.creatCollege(command) ||
                 commandHandler.increaseCapacityCourse(command) || commandHandler.StudentSeeOwnPikedCourse(command) ||
                 commandHandler.DeleteOwnCoursePiked(command) || commandHandler.StudentPikeCourse(command) ||
-                commandHandler.Importt(command) || commandHandler.Export(command)
+                commandHandler.Importt(command) || commandHandler.Export(command)||commandHandler.exportf(command)
         ) {
             return "";
         } else {

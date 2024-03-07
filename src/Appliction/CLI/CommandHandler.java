@@ -24,7 +24,7 @@ public class CommandHandler {
             } else if (Cli.state.equals("sign up")) {
                 HelpResult += "back -> back to the sign in or sign up state\nenter a user name and password that you want for your account";
             } else if (Cli.state.equals("adminPanel")) {
-                HelpResult += "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\nimport + path -> for save the information of the university to this path\nexport + path -> for load the information of university in this path";
+                HelpResult += "back -> back to the sign in state\nld -> for see the list of the Department\nmkcou -> creat  new course\nmkdep + name -> creat new department\nexport + path -> for save the information of the university to this path\nimport + path -> for load the information of university on this path\nexportf + path ->for save the information of the university forever";
             } else if (Cli.state.equals("studentPanel")) {
                 HelpResult += "back -> back to the sign in\nld -> for see the list of the Department\nlpc -> to see your picked course";//todo
             } else if (Cli.state.equals("CollegeList")) {
@@ -46,6 +46,14 @@ public class CommandHandler {
         }
         System.out.println(HelpResult);
         return true;
+    }
+    public boolean exportf(Command command){
+        if (command.getCommand().equals("exportf")&&Cli.AmIAdmin&&Cli.state.equals("adminPanel")){
+            AdminSave adminSave = new AdminSave();
+            adminSave.Export("src\\Appliction\\Savedata");
+            return true;
+        }
+        return false;
     }
 
     public boolean Importt(Command command) {
@@ -129,6 +137,7 @@ public class CommandHandler {
                     Cli.state = "adminPanel";
                     Cli.AmIAdmin = true;
                 } else {
+                    Cli.AmIAdmin = false;
                     for (Student stu : university.StudentList) {
                         if (stu.getUserName().equals(command.getCommand())) {
                             Cli.curentStudent = stu;
@@ -167,7 +176,7 @@ public class CommandHandler {
                 return true;
             }
             if (command.getArg() == null && command.getCommand().equals("ld")) {
-                System.out.println("List of the department of university:");
+                System.out.println("List of the departments of the university:");
                 for (College c : university.collegesList) {
                     System.out.println(c);
                 }
@@ -196,7 +205,7 @@ public class CommandHandler {
                         System.out.println("no courses for this college");
                         return true;
                     }
-                    System.out.println("List of the course of the "+Cli.curentCollege+"department");
+                    System.out.println("List of the course of the " + Cli.curentCollege + "department");
                     System.out.println("NAME ->code,Unit,teacher,StartTime,examDat,examtime,type,capacity,numOfStu,department");
                     for (courses cou : c.getListOfCourses()) {
                         System.out.println(cou);
@@ -205,7 +214,7 @@ public class CommandHandler {
             }
             if (!IFindIt && !command.getCommand().equals("help")) {
                 System.out.println("no department with this name");
-            } else if (!Cli.AmIAdmin) {
+            } else {
                 Cli.state = "coursesList";
             }
             return true;
@@ -214,7 +223,7 @@ public class CommandHandler {
     }
 
     public boolean seetheStudent(Command command) {
-        if (command.getArg() == null && Cli.state.equals("coursesList") && creatState == 0&&Cli.AmIAdmin) {
+        if (command.getArg() == null && Cli.state.equals("coursesList") && creatState == 0 && Cli.AmIAdmin) {
             if (command.getCommand().equals("back")) {
                 Cli.state = ("CollegeList");
                 return true;
@@ -285,11 +294,11 @@ public class CommandHandler {
         for (College college : university.collegesList) {
             for (courses cou : college.getListOfCourses()) {
                 if (code == cou.getCode()) {
-                    return true;
+                    return false;
                 }
             }
         }
-        return false;
+        return true;
     }
 
     //    public boolean deleteStudent(Command command) {
@@ -381,7 +390,7 @@ public class CommandHandler {
                 return true;
 
             } else if (creatState == 8) {
-                System.out.println("type(general or Professional):");
+                System.out.println("type(general or professional):");
                 creatState++;
                 coursesCreat.setExamDate((command.getCommand()));
                 return true;
@@ -392,12 +401,13 @@ public class CommandHandler {
                     creatState++;
                     return true;
                 } else if (command.getCommand().equals("professional")) {
-                    coursesCreat.setType("t");
+                    coursesCreat.setType("professional");
                     System.out.println("department :");
                     creatState++;
                     return true;
                 }
-                System.out.println(Application.ERROR);
+                System.out.println("please enter general or professional");
+                return true;
             } else if (creatState == 10) {
                 for (College college : university.collegesList) {
                     if (college.getName().equals(command.getCommand()) && !DoWEHaveThisCourse(college, coursesCreat)) {
@@ -538,8 +548,9 @@ public class CommandHandler {
 
     public boolean StudentPikeCourse(Command command) {
         if (!Cli.AmIAdmin && Cli.state.equals("coursesList")) {
-            if (command.getCommand().equals("back")){
-                Cli.state="CollegeList";
+            if (command.getCommand().equals("back")) {
+                Cli.state = "studentPanel";
+                seeListOfCollege(new Command("ld"));
                 return true;
             }
             if (command.getCommand().equals("add")) {
@@ -566,6 +577,8 @@ public class CommandHandler {
                     System.out.println("your Picked List is empty");
                     return true;
                 }
+                System.out.println("Unit picked -> "+Cli.curentStudent.getUnits_piked());
+                System.out.println("general Unite ->"+Cli.curentStudent.getGeneral_unit());
                 System.out.println("List of your course->");
                 System.out.println("NAME  :: code,Unit,teacher,StartTime,examDat,examTime,type,capacity,numOfStu,department");
                 for (courses cou : Cli.curentStudent.getCoursesArrayList()) {

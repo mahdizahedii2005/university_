@@ -142,7 +142,7 @@ public class AdminSave {
                     try {
                         student.PikeCourses(findCourseByCode(Integer.parseInt(codeCol[0]), mored_nazar));
                     } catch (NullPointerException n) {
-                        System.out.println("null find ");
+                        System.out.println("the course that picked by student and available course in the university don't matched each other");
                     }
                 }
             } catch (IOException e) {

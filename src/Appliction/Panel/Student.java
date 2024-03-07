@@ -9,6 +9,10 @@ public class Student extends Panel {
     private int general_unit = 0;
     private ArrayList<courses> coursesArrayList = new ArrayList<>();
 
+    public int getGeneral_unit() {
+        return general_unit;
+    }
+
     public void restart() {
         general_unit = 0;
         Units_piked = 0;

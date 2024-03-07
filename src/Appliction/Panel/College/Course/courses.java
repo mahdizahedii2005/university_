@@ -72,7 +72,7 @@ public class courses {
 
     @Override
     public String toString() {
-        return name + " :: " + code + " , " + Unit + " , " + teacher + " , " + StartTime + " , " + examDate + " , " + examTime + " , " + Type + " , " + capacity + " , " + numberOfStudent + " , " + getCollege();
+        return name + " ->" + code + " , " + Unit + " , " + teacher + " , " + StartTime + " , " + examDate + " , " + examTime + " , " + Type + " , " + capacity + " , " + numberOfStudent + " , " + getCollege();
 
     }
 

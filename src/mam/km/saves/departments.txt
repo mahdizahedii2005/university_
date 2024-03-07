@@ -4,7 +4,7 @@ ap,85285,3,dr.mostajeran,11:00,1403/3/10,09:00,general,70,0,civil
 jabr,77787,10,dr.pornaki,01:00,1403/3/10,09:00,t,10,5,civil
 #
 !math
-bp,20026,1,dr.mohamadi,10:00,1403/3/30,09:00,general,30,2,math
+bp,20026,1,dr.mohamadi,10:00,1403/3/30,09:00,general,30,1,math
 ap,25026,1,dr.mostajeran,11:00,1403/3/10,09:00,general,70,0,math
 jabr,25726,5,dr.pornaki,01:00,1403/3/10,09:00,t,10,0,math
 #
@@ -16,9 +16,6 @@ jabr,2726,4,dr.pornaki,01:00,1403/3/10,09:00,t,10,0,phicis
 !ce
 bp,20126,1,dr.mohamadi,18:00,1402/3/30,09:00,t,30,4,ce
 ap,20526,2,dr.mostajeran,01:00,1405/3/10,09:00,t,70,0,ce
-jabr,21726,3,dr.pornaki,16:00,1404/3/10,09:00,t,10,5,ce
-opp,111115,3,dr.alizadeh,09:09,1403/7/25,11:10,general,20,0,ce
-lol,4747,1,mamad,07:50,1401/9/15,08:00,general,50,1,ce
-newcourse,121,1,mamas,05:05,1403/6/20,05:05,general,30,0,ce
-new2,909090,2,nnn,08:50,1403/5/10,005:50,general,30,0,ce
+jabr,21726,3,dr.pornaki,16:00,1404/3/10,09:00,t,10,4,ce
+oop,111112,4,ali,14:50,1402/8/9,17:50,general,70,0,ce
 #
