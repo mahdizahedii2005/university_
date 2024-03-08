@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caecddeb-24cd-41c9-a909-a8e18c923bd2" name="Changes" comment="fix hard code and some student to hard code and password and user name  and add dee the student to code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/Cli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/CLI/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/College/Course/courses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/Panel/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/AdminSave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/StudentFile/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/saves/StudentFile/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/saves/StudentFile/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Appliction/SaveData/saves/departments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/SaveData/saves/departments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appliction/hardcode/addCollegeAndCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/402109731.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/402199931.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/402715155.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/402777781.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/StudentFile/ar.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mam/km/saves/departments.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +102,7 @@
       <workItem from="1709735580866" duration="14372000" />
       <workItem from="1709799248820" duration="23000" />
       <workItem from="1709799523176" duration="4998000" />
+      <workItem from="1709907104889" duration="358000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="fix hard code and some student to hard code and password and user name  and add dee the student to code">
       <option name="closed" value="true" />
